@@ -11,13 +11,11 @@ terraform {
 
 variable "object_count" {
   type = number
-  default = 1750
+  default = 500
   description = "Number of objects to create in the bucket"
 }
 
 provider "aws" {
-  profile = "redlumxn"
-  region  = "ap-southeast-2"
   default_tags {
     tags = {
       Environment = "Harrison-ai"

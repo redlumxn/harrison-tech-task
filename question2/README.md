@@ -80,7 +80,7 @@ $ /message_publisher.py $(terraform output -raw bucket_name) $(terraform output 
 
 Sample run:
 ```sh
-./message_publisher.py $(terraform output -raw bucket_name) $(terraform output -raw queue_url)
+% ./message_publisher.py $(terraform output -raw bucket_name) $(terraform output -raw queue_url)
 INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
 INFO:root:Reading objects from bucket [question-2-bucket7el6g9mqfwh1jd5l] and publishing messages to queue [https://sqs.ap-southeast-2.amazonaws.com/209852133120/question2-queue.fifo]
 INFO:root:Begin bucket object listing...

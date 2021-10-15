@@ -54,7 +54,7 @@ The provided Terraform resource files setup the AWS resources (SQS queue, S3 Buc
 $ brew install tfenv
 $ tfenv install 1.0.9
 $ tfenv use 1.0.9
-$ export AWS_PROFILE=<replace> && export AWS_REGION=ap-southeast-2
+$ export AWS_PROFILE=<replace> && export AWS_DEFAULT_REGION=ap-southeast-2
 $ terraform init
 $ terraform plan -out=tfplan
 $ terraform apply tfplan 

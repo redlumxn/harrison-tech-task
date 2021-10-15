@@ -69,13 +69,13 @@ $ terraform apply tfplan
 ### Executing program
 
 ```sh
-$ /message_publisher.py <BUCKET_NAME) <QUEUE_URL>
+$ ./message_publisher.py <BUCKET_NAME) <QUEUE_URL>
 ```
 **NOTE:** Make sure `message_publisher.py` is executable (e.g. `chmod  +x message_publisher.py`)
 
 If the AWS resources were created using the provided terraform files, you can grab the required values from the terraform output.
 ```sh
-$ /message_publisher.py $(terraform output -raw bucket_name) $(terraform output -raw queue_url)
+$ ./message_publisher.py $(terraform output -raw bucket_name) $(terraform output -raw queue_url)
 ```
 
 Sample run:

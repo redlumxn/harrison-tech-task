@@ -34,8 +34,8 @@ The script leverages the following AWS features:
 * Python 3
 * [virtualenv](https://virtualenv.pypa.io/en/latest/)
 * [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
-* Terraform 1.0.9 (optional)
-* [tfenv](https://github.com/tfutils/tfenv)
+* Terraform 1.0.9
+* [tfenv](https://github.com/tfutils/tfenv) (optional)
 
 ### Installing requirements
 

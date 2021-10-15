@@ -10,8 +10,8 @@ terraform {
 }
 
 variable "object_count" {
-  type = number
-  default = 500
+  type        = number
+  default     = 500
   description = "Number of objects to create in the bucket"
 }
 
@@ -45,18 +45,18 @@ resource "aws_s3_bucket" "question_2_bucket" {
 }
 
 resource "random_string" "random" {
-  length           = 16
-  special          = false
-  lower = true
-  upper = false
-#   override_special = "/@£$"
+  length  = 16
+  special = false
+  lower   = true
+  upper   = false
+  #   override_special = "/@£$"
 }
 
 resource "aws_s3_bucket_object" "object" {
-  count   = var.object_count
-  bucket  = aws_s3_bucket.question_2_bucket.id
-  key     = "${sha256(uuid())}.ext"
-  content = uuid()
+  count         = var.object_count
+  bucket        = aws_s3_bucket.question_2_bucket.id
+  key           = "${sha256(uuid())}.ext"
+  content       = uuid()
   storage_class = "ONEZONE_IA"
 
 }

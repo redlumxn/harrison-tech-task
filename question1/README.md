@@ -50,13 +50,13 @@ $ terraform apply tfplan
 ```
 
 ### Sample Replication execution
-#### Replication Rule
+#### Replication Rule (Source bucket)
 ![Replication Rule](screenshots/ReplicationRule.png)
 
-#### Object Replication Pending
+#### Object Replication Pending (Source bucket)
 ![Object Replication Pending](screenshots/ObjectReplication-PENDING.png)
 
-#### Object Replication Completed
+#### Object Replication Completed (Source bucket)
 ![Object Replication Completed](screenshots/ObjectReplication-COMPLETED.png)
 
 #### Object Replication Completed (Destination Bucket)

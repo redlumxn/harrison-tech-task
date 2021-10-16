@@ -34,8 +34,8 @@ The script leverages the following AWS features:
 * Python 3
 * [virtualenv](https://virtualenv.pypa.io/en/latest/)
 * [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
-* Terraform 1.0.9 (optional)
-* [tfenv](https://github.com/tfutils/tfenv)
+* Terraform 1.0.9
+* [tfenv](https://github.com/tfutils/tfenv) (optional)
 
 ### Installing requirements
 
@@ -54,7 +54,7 @@ The provided Terraform resource files setup the AWS resources (SQS queue, S3 Buc
 $ brew install tfenv
 $ tfenv install 1.0.9
 $ tfenv use 1.0.9
-$ export AWS_PROFILE=<replace> && export AWS_REGION=ap-southeast-2
+$ export AWS_PROFILE=<replace> && export AWS_DEFAULT_REGION=ap-southeast-2
 $ terraform init
 $ terraform plan -out=tfplan
 $ terraform apply tfplan 

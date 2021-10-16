@@ -4,16 +4,16 @@ Response to Harrison.ai Tech Task - [Question 1](https://github.com/harrison-ai/
 
 ## Description
 
-In order to provide the object replication across buckects hosted in different AWS account, [S3 Object replication rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html) are leveraged. This allows the replicated obkjects to be fully owned by the destionation AWS account in addition to being a S3 feature that only requires to be configured (vs scripting or standing up additional services).
+In order to provide the object replication across buckects hosted in different AWS account, [S3 Object replication rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html) are leveraged. This allows the replicated objects to be fully owned by the destination AWS account in addition to being a S3 feature that only requires to be configured (vs scripting or standing up additional services).
 
- The The Terraform files included in this repo create and configure the resources in the following accounts.
+ The Terraform files included in this repo create and configure the resources in the following accounts:
 * Source Account: Annalise.ai
 * Target Account: Harrissson.ai
 
 The setup includes:
 1. Setting bucket versioning
 2. Modifying bucket policies
-3. Creation of IAM Role in the source accoint with the required permissions (via policies)
+3. Creation of IAM Role in the source account with the required permissions (via policies)
 4. Creattion of the bucket replication rule (in source bucket)
 
 ## Getting Started
@@ -40,6 +40,8 @@ locals {
   annalise_profile = "<CHANGE_ME>"
 }
 ```
+
+Once the above is done, you can upload any number of files into the source bucket. After waiting a few secs/minutes, replication will kickoff. You can then validate that the files were replicated across buckets with the proper changes in ownership.
 
 ### Creating the resources across AWS accounts
 
